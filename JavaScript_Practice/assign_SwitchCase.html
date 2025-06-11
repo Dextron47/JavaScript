@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num1 = Number(prompt("Enter 1st number : "));
+        var num2 = Number(prompt("Enter 2nd number : "));
+        document.write("1st Number : "+num1+"<br>");
+        document.write("2nd number : "+num2+"<br>");
+
+        var operation = Number(prompt("Enter 1 for addition, 2 for subtraction, 3 for multiplication and 4 for divison :  "))
+
+        switch(operation){
+            case 1 : 
+                document.write("num1 + num2 = "+(num1 + num2));
+                break;
+            case 2 : 
+                document.write("num1 - num2 = "+(num1 - num2));
+                break;
+            case 3 : 
+                document.write("num1 x num2 = "+(num1 * num2));
+                break;
+            case 4 : 
+                document.write("num1 / num2 = "+(num1 / num2));
+                break;
+            default: 
+                document.write("Enter valid number!")
+        }
+    </script>
+</body>
+</html>
