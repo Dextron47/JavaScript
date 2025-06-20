@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = 10;
+        let a = 1;
+        while(a <= n){
+            let b = n;
+            while(b > a){
+                document.write("&nbsp; &nbsp;");
+                b--;
+            }
+            let c = 1;
+            while(c <= (2 * a - 1)){
+                document.write(" * ");
+                c++;
+            }
+            document.write("<br>");
+            a++;
+        }
+
+        a = n - 1;
+        while (a >= 1){
+            let b = n;
+            while(b > a){
+                document.write("&nbsp;&nbsp;");
+                b--;
+            }
+            let c = 1;
+            while(c <= (2 * a - 1)){
+                document.write(" * ");
+                c++;
+            }
+            document.write("<br>");
+            a--;
+        }
+    </script>
+</body>
+</html>
