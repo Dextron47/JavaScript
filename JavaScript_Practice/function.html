@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function display(){
+      //     document.write("Hello World!");
+      // }
+      // display();
+
+      //   function display(a, b, c) {
+      //     document.write(a + "<br>");
+      //     document.write(b + "<br>");
+      //     document.write(c + "<br>");
+      //   }
+      //   display(10, 12, 14);
+      //     //   Output:
+      //     //   10
+      //     //   12
+      //     //
+
+      function display(a, b = "6", c) {
+        document.write(a + "<br>");
+        document.write(b + "<br>");
+        document.write(c + "<br>");
+        document.write(typeof a + "<br>");
+        document.write(typeof b + "<br>");
+        document.write(typeof c);
+      }
+      display(10, "12");
+
+    //   Output: 10;
+    //   12;
+    //   undefined;
+    //   number;
+    //   string;
+    //   undefined;
+    </script>
+  </body>
+</html>
