@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruits = ['mango', 'orange', 'banana'];
+        document.write(fruits+"<br>");
+
+        // document.write(fruits[2]+"<br>");
+        // document.write(fruits[4]+"<br>");
+
+        // // array reverse
+        // let arr = [1,2,3,4,5];
+        // arr.reverse();
+        // document.write(arr+"<br>");
+        // document.write(arr.length+"<br>");
+
+        // // push() : adds one or more elements to the end of the array
+        // fruits.push("kiwi");
+        // document.write(fruits+"<br>");
+
+        // // pop() : Removes the last element from the array
+        // fruits.pop();
+        // document.write(fruits+"<BR>");
+
+        // // shift() : Removes the first element from the array 
+        // fruits.shift();
+        // document.write(fruits+"<br>");
+
+        // // unshift () : Adds one or more elements to the beginning of the array
+        // fruits.unshift(",pineapple");
+        // document.write(fruits);
+
+        // // concat () : Joins two or more arrays into a new array
+        // let vegetables = ['carrot', 'broccoli'];
+        // let food = fruits.concat(vegetables);
+        // document.write(food);
+
+        // slice () : Returns a shallow copy of a portion of an array
+        let sf = fruits.slice(0,2);  // Extracts from index 0 to 2 ( 3 is not included )
+        document.write(sf+"<br>");
+
+        // splice() : Adds/removes elements from an array at a specific index
+        fruits.splice(1,1,'kiwi','pineapple'); // removes 1 element at index 1 and adds two new ones
+        document.write(fruits+"<br>");
+
+        // forEach() : Executes a provided function once for each array element.
+        fruits.forEach(function(item, index){
+            document.write(index + ": " + item + "<br>");
+        });
+
+        // map() : creates a new array by applying a function to each element of the array
+        let fruitsUpper = fruits.map(function(item){
+            return item.toUpperCase();
+        });
+        document.write(fruitsUpper+"<br>");
+
+        // filter() : Creates a new array with all the elements that pass a test.
+        let num = [1,2,3,4,5,6,7,8];
+        let evenNumbers = num.filter(function(num){
+            return num % 2 == 0;
+        });
+        document.write(evenNumbers+"<br>");
+
+        // reduce() : Applies a function against an accumulator and each element in the array to reduce it to a single value
+        let sum = num.reduce(function(accumulator, currentValue){
+            return accumulator + currentValue;
+        }, 0);
+        document.write(sum);
+
+    </script>
+</body>
+</html>
