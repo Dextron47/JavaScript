@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruits = ["Apple", "Banana", "Cherry"];
+
+        // join()
+        let fruitList = fruits.join(", ");
+        document.write(fruitList+"<br>");
+
+        // indexOf()
+        let index = fruits.indexOf("Banana");
+        document.write(index+"<br>");
+
+        // slice()
+        let newFruits = fruits.slice(1,3);
+        document.write(newFruits+"<br>");
+
+        // concat()
+        let moreFruits = fruits.concat(["kiwi","Guava"]);
+        document.write(moreFruits);
+    </script>
+</body>
+</html>
