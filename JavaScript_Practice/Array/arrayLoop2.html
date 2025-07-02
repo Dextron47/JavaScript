@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // access array elements with loops
+        var sum = 0;
+        var marks = new Array(5);
+        for(var i = 0; i < marks.length; i++){
+            marks[i] = parseInt(prompt('Enter marks : ',''));
+            sum = sum + marks[i];
+        }
+        alert('Average marks : '+(sum/marks.length));
+
+        // access array elements without loops 
+        var employees = new Array(3);
+        employees[0] = new Array('John', '25', 'New Jersey');
+        employees[1] = new Array('Alice', '30', 'California');
+        employees[2] = new Array('Bob', '35', 'Florida');
+        document.write('<h1>Employees Detail</h1>');
+
+        document.write('<p><b>Name : </b>' + employees[0][0] + '</p>');
+        document.write('<p><b>Age : </b>' + employees[0][1] + '</p>');
+        document.write('<p><b>Location : </b>' + employees[0][2] + '</p>');
+
+        document.write('<p><b>Name : </b>' + employees[1][0] + '</p>');
+        document.write('<p><b>Age : </b>' + employees[1][1] + '</p>');
+        document.write('<p><b>Location : </b>' + employees[1][2] + '</p>');
+
+        document.write('<p><b>Name : </b>' + employees[2][0] + '</p>');
+        document.write('<p><b>Age : </b>' + employees[2][1] + '</p>');
+        document.write('<p><b>Location : </b>' + employees[2][2] + '</p>');
+
+
+    </script>
+</body>
+</html>
