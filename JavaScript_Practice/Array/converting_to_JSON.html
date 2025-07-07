@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Convert students Array to JSON </h3>
+    <button onclick="convertToJSON()">Show JSON</button>
+    <pre id="output"></pre>
+
+    <script>
+        const students = [{id : 1, name : "Alice", age : 22},
+            {id : 2, name : "Bob", age : 20},
+            {id : 3, name : "Charlie", age : 25},
+        ]
+
+        function convertToJSON(){
+            const studentJSON = JSON.stringify(students, null, 2);
+            document.getElementById("output").textContent = studentJSON;
+        }
+    </script>
+</body>
+</html>
