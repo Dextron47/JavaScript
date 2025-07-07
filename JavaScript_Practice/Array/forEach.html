@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Loop through students</h3>
+    <button onclick="displayStudents()">Show student details</button>
+    <pre id="output"></pre>
+    <script>
+        const students = [{id : 1, name : "Alice", age : 20, grade : 'A'},
+            {id : 2, name : "Bob", age : 22, grade : 'B'},
+            {id : 3, name : "Charlie", age : 25, grade : 'A'},
+            {id : 4, name : "David", age : 18, grade : 'C'},
+        ]
+        
+        function displayStudents(){
+            let output = "Student Details : \n";
+            students.forEach(student => {
+                output += `ID : ${student.id}, Name : ${student.name}, Age : ${student.age}, Grade : ${student.grade}\n`;
+            });
+            document.getElementById("output").textContent = output;
+        }
+    </script>
+</body>
+</html>
