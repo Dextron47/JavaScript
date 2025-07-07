@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Sort students by age</h3>
+    <button onclick="sortStudents()">Sort</button>
+    <pre id="output"></pre>
+    <script>
+        let students = [{id : 1, name : 'Alice', age : 22},
+            {id : 2, name : 'Bob', age : 20},
+            {id : 3, name : 'Charlie', age : 25},
+            {id : 4, name : 'David', age : 21},
+        ];
+        // Display original list
+
+        document.getElementById("output").textContent = 'Original list : \n' + displayStudents(students);
+        function displayStudents(students){
+            return students.map(s => `ID : ${s.id}, Name: ${s.name}, Age : ${s.age}`).join("\n");
+        }
+        function sortStudents(){
+            // sort students by age in ascending order
+            students.sort((a,b) => a.age - b.age);
+            document.getElementById("output").textContent = "Sorted List : \n" + displayStudents(students);
+        }
+    </script>
+</body>
+</html>
