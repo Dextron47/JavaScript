@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Filter students by grade</h3>
+    <button onclick="filterGrade('A')">Show Grade A students</button>
+    <button onclick="filterGrade('B')">Show Grade B students</button>
+    <pre id="output"></pre>
+
+    <script>
+        const students = [{id : 1, name : 'Alice', grade : 'A'},
+            {id : 2, name : 'Bob', grade : 'B'},
+            {id : 3, name : 'Charlie', grade : 'A'},
+            {id : 4, name : 'David', grade : 'C'},
+        ]
+
+        function displayStudents(students){
+            return students.map(s => `ID : ${s.id}, Name : ${s.name}, Grade : ${s.grade}`).join("\n");
+        }
+        function filterGrade(grade){
+            const filteredStudents = students.filter(student => student.grade === grade);
+            document.getElementById('output').textContent = `Students with Grade ${grade} : \n`+ displayStudents(filteredStudents);
+        }
+
+        document.getElementById("output").textContent = "All Students : \n " + displayStudents(students); 
+    </script>
+</body>
+</html>
