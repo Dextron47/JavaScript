@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const employees = [{id: 1, name : 'Alice', department : 'HR'},
+    {id: 2, name : 'Bob', department : 'IT'},
+    {id: 3, name : 'Charlie', department : 'Finance'}]
+
+    // find employee with id = 2
+    // const employee = employees.find(emp => emp.id === 2);
+    // // document.write(employee);
+    // console.log(employee);
+
+    // find index of employee with id = 2
+    const employee = employees.findIndex(emp => emp.id === 3);
+    console.log(employee);
+    </script>
+  
+</body>
+</html>
