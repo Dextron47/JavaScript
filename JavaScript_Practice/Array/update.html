@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const employees = [{id : 1, name : 'Bob', department : 'HR'},
+            {id : 2, name : 'Alice', department : 'IT'},
+            {id : 3, name : 'Charlie', department : 'Finance'}
+        ]
+
+        // const index = employees.findIndex(e => e.id === 2);
+        // if(index !== -1){
+        //     employees[index].department = 'Marketing';
+        // }
+        // console.log(employees);
+
+        const updatedEmp = employees.map(emp => emp.id === 2?{...emp, department: 'Marketing'}:emp);
+        console.log(updatedEmp);
+
+
+    </script>
+</body>
+</html>
