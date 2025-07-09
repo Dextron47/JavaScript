@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let car = new Object();
+        // car.brand = 'toyota';
+        // car.model = 'Camry';
+        // car.year = 2022;
+        // car.start = function(){
+        //     console.log('Car is starting....');
+        // };
+        // console.log(car.brand);
+        // car.start();
+
+        function person(name, age, city){
+            this.name = name;
+            this.age = age;
+            this.city = city;
+            this.introduce = function() {
+                console.log(`Hi, I'm ${this.name} from ${this.city}`);
+            }
+        }
+        let person1 = new person('Alice', 18, 'New york');
+        let person2 = new person('Bob', 45, 'Los Angeles');
+
+        console.log(person1.name);
+        console.log(person2.city);
+
+        person1.introduce();
+    </script>
+</body>
+</html>
